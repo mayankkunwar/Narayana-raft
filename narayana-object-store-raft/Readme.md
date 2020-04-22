@@ -4,7 +4,7 @@
 
 ## Requirements
 
-To add nodes to cluster edit [src/resources/narayana-raft.xml](https://github.com/mayankkunwar/narayana-raft/blob/master/narayana-object-store-raft/src/resources/narayana-raft.xml) file
+To add nodes to cluster edit [src/resources/narayana-raft.xml](https://github.com/mayankkunwar/narayana-raft/blob/master/narayana-object-store-raft/src/resources/narayana-raft.xml#L26) file
 
 > <raft.RAFT members="node1,node2" raft_id="${raft_id:undefined}"/>
 
