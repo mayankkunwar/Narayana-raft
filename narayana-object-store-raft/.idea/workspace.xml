@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ab8cd86e-72c8-484f-a1d9-e7f32b18070d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1aYyQ8bJftaGNbCUaMFrOxKSHLQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resource" />
+    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.jboss.narayana.quickstart.txoj" />
+      <recent name="org.jboss.narayana.quickstart.txoj.demo" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/resource" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AtomicOps">
+    <configuration name="AtomicOps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jboss.narayana.quickstart.txoj.AtomicOps" />
+      <module name="narayana-object-store-raft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jboss.narayana.quickstart.txoj.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Raft Follower" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.jboss.narayana.quickstart.txoj.demo.TransactionSMDemo" />
+      <module name="narayana-object-store-raft" />
+      <option name="PROGRAM_PARAMETERS" value="tom true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Raft Leader" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="org.jboss.narayana.quickstart.txoj.demo.TransactionSMDemo" />
+      <module name="narayana-object-store-raft" />
+      <option name="PROGRAM_PARAMETERS" value="fake false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jboss.narayana.quickstart.txoj.statemachine.Test" />
+      <module name="narayana-object-store-raft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jboss.narayana.quickstart.txoj.statemachine.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionSMDemo B" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="main.java.org.jboss.narayana.quickstart.txoj.demo.TransactionSMDemo" />
+      <module name="narayana-object-store-raft" />
+      <option name="PROGRAM_PARAMETERS" value="-name B" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.java.org.jboss.narayana.quickstart.txoj.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransactionSMDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.jboss.narayana.quickstart.txoj.demo.TransactionSMDemo" />
+      <module name="narayana-object-store-raft" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.jboss.narayana.quickstart.txoj.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Raft Leader" />
+      <item itemvalue="Application.Raft Follower" />
+      <item itemvalue="Application.AtomicOps" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.TransactionSMDemo B" />
+      <item itemvalue="Application.TransactionSMDemo" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AtomicOps" />
+        <item itemvalue="Application.TransactionSMDemo" />
+        <item itemvalue="Application.TransactionSMDemo B" />
+        <item itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ab8cd86e-72c8-484f-a1d9-e7f32b18070d" name="Default Changelist" comment="" />
+      <created>1586926802182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586926802182</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="555" y="215" width="864" height="684" key="#Project_Structure" timestamp="1587551138412">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="215" width="864" height="684" key="#Project_Structure/0.27.1920.1053@0.27.1920.1053" timestamp="1587551138412" />
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587557756183">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="418" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587557756183" />
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser" timestamp="1586956266339">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="768" y="272" width="374" height="569" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1586956266339" />
+    <state x="800" y="445" width="309" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1586931651026">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="800" y="445" width="309" height="223" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1586931651026" />
+    <state x="758" y="312" width="447" height="497" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1587551056765">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="758" y="312" width="447" height="497" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587551056765" />
+    <state x="598" y="227" width="713" height="660" key="#com.intellij.unscramble.UnscrambleDialog" timestamp="1587472970731">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="598" y="227" width="713" height="660" key="#com.intellij.unscramble.UnscrambleDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587472970731" />
+    <state x="743" y="266" width="424" height="582" key="FileChooserDialogImpl" timestamp="1587392601130">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="743" y="266" width="424" height="582" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1587392601130" />
+    <state width="1872" height="274" key="GridCell.Tab.0.bottom" timestamp="1587572905883">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="274" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587572905883" />
+    <state width="1872" height="274" key="GridCell.Tab.0.center" timestamp="1587572905882">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="274" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587572905882" />
+    <state width="1872" height="274" key="GridCell.Tab.0.left" timestamp="1587572905881">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="274" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587572905881" />
+    <state width="1872" height="274" key="GridCell.Tab.0.right" timestamp="1587572905883">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="274" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587572905883" />
+    <state width="1872" height="339" key="GridCell.Tab.1.bottom" timestamp="1587480347010">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="339" key="GridCell.Tab.1.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1587480347010" />
+    <state width="1872" height="339" key="GridCell.Tab.1.center" timestamp="1587480347010">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="339" key="GridCell.Tab.1.center/0.27.1920.1053@0.27.1920.1053" timestamp="1587480347010" />
+    <state width="1872" height="339" key="GridCell.Tab.1.left" timestamp="1587480347010">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="339" key="GridCell.Tab.1.left/0.27.1920.1053@0.27.1920.1053" timestamp="1587480347010" />
+    <state width="1872" height="339" key="GridCell.Tab.1.right" timestamp="1587480347010">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="339" key="GridCell.Tab.1.right/0.27.1920.1053@0.27.1920.1053" timestamp="1587480347010" />
+    <state x="534" y="249" width="841" height="615" key="NewModule_or_Project.wizard" timestamp="1587392603228">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="534" y="249" width="841" height="615" key="NewModule_or_Project.wizard/0.27.1920.1053@0.27.1920.1053" timestamp="1587392603228" />
+    <state x="441" y="188" width="1037" height="737" key="SettingsEditor" timestamp="1586953764070">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="441" y="188" width="1037" height="737" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1586953764070" />
+    <state x="607" y="381" key="com.intellij.ide.util.TipDialog" timestamp="1587548809292">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="607" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1587548809292" />
+    <state x="481" y="252" width="948" height="610" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1587480293472">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="481" y="252" width="948" height="610" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.27.1920.1053@0.27.1920.1053" timestamp="1587480293472" />
+    <state x="595" y="269" width="730" height="568" key="find.popup" timestamp="1587573144135">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="595" y="269" width="730" height="568" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587573144135" />
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1587565141432">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="623" y="259" width="672" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1587565141432" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/org/jboss/narayana/quickstart/txoj/AtomicOps.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/org/jboss/narayana/quickstart/txoj/statemachine/TransactionStateMachine.java</url>
+          <line>192</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
