@@ -10,11 +10,6 @@ To add nodes to cluster edit [src/resources/narayana-raft.xml](https://github.co
 
 You can add as many nodes as you want before starting the raft.
 
-To add the nodes dynamically follow the below steps:
-- work in progress
--
--
-
 
 ## Building Naryana-raft
 
