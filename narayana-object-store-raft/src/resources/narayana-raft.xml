@@ -23,7 +23,7 @@
 <MFC max_credits="2M" min_threshold="0.4"/>
 <FRAG2 frag_size="60K"  />
 <raft.ELECTION election_min_interval="100" election_max_interval="500"/>
-<raft.RAFT members="paris,usa" raft_id="${raft_id:undefined}"/>
+<raft.RAFT members="NODE1,NODE2" raft_id="${raft_id:undefined}"/>
 <raft.REDIRECT/>
 <raft.CLIENT bind_addr="0.0.0.0" />
 </config>

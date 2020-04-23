@@ -51,10 +51,7 @@ public class AtomicObject extends LockManager implements Serializable {
 
             return;
         } else {
-            releaselock(get_uid());
-            incr(value);
-            System.out.println("Write lock error in incr() : value by "+value);
-//            throw new Exception("Write lock error.");
+            throw new Exception("Write lock error.");
         }
     }
 
@@ -63,10 +60,7 @@ public class AtomicObject extends LockManager implements Serializable {
             state = value;
             return;
         } else {
-            releaselock(get_uid());
-            set(value);
-            System.out.println("Write lock error in set() : value to "+value);
-//            throw new Exception("Write lock error.");
+            throw new Exception("Write lock error.");
         }
     }
 
@@ -74,11 +68,7 @@ public class AtomicObject extends LockManager implements Serializable {
         if (setlock(new Lock(LockMode.READ), defaultRetry, defaultSleepTime) == LockResult.GRANTED) {
             return state;
         } else {
-            releaselock(get_uid());
-            System.out.println("Read lock error in get() : value");
-            return get();
-
-//            throw new Exception("Read lock error.");
+            throw new Exception("Read lock error.");
         }
     }
 

@@ -1,6 +1,5 @@
 package org.jboss.narayana.quickstart.txoj.statemachine;
 
-import org.jboss.narayana.quickstart.txoj.AtomicObject;
 import org.jboss.narayana.quickstart.txoj.TransactionActions;
 import org.jgroups.JChannel;
 import org.jgroups.protocols.raft.InternalCommand;
@@ -40,7 +39,7 @@ public class TransactionStateMachine implements StateMachine, RAFT.RoleChange {
     }
 
     protected enum TxCommand {
-        createAtomicAction, beginAtomicAction, commitAtomicAction, abortAtomicAction,
+        execUserCommand, createAtomicAction, beginAtomicAction, commitAtomicAction, abortAtomicAction,
         getAtomicObject, createAtomicObject, incrementAndGetAtomicObject, decrementAndGetAtomicObject, addAndGetAtomicObject
     }
 
@@ -126,6 +125,10 @@ public class TransactionStateMachine implements StateMachine, RAFT.RoleChange {
                 TransactionStateMachine.TxCommand type = TransactionStateMachine.TxCommand.values()[in.readByte()];
                 Object val;
                 switch (type) {
+                    case execUserCommand:
+                        val = Util.objectFromStream(in);
+                        sb.append("execUserCommand sequence : "+ String.valueOf(val));
+                        break;
                     case createAtomicAction:
                         sb.append("createAtomicAction()");
                         break;
@@ -168,6 +171,7 @@ public class TransactionStateMachine implements StateMachine, RAFT.RoleChange {
     @Override
     public void roleChanged(Role role) {
         this.role = role;
+        System.out.println(this.raftId()+"'s ROLE changed to "+role.name());
     }
 
     ///////////////////////////////////////// StateMachine callbacks /////////////////////////////////////
@@ -178,9 +182,9 @@ public class TransactionStateMachine implements StateMachine, RAFT.RoleChange {
         TransactionStateMachine.TxCommand command = TransactionStateMachine.TxCommand.values()[in.readByte()];
         Object val;
         switch (command) {
-            case beginAtomicAction:
-                this.txActions.beginTransaction();
-                break;
+            case execUserCommand:
+                val = Util.objectFromStream(in);
+                return Util.objectToByteBuffer(this.txActions.executeUserTx((String) val));
             case commitAtomicAction:
                 this.txActions.commitTransaction();
                 break;
@@ -219,48 +223,13 @@ public class TransactionStateMachine implements StateMachine, RAFT.RoleChange {
 
     ///////////////////////////////////// End of StateMachine callbacks ///////////////////////////////////
 
-    public AtomicObject get() throws Exception {
-        Object retval = allow_dirty_reads ? getAtomicObjectDirectly() : invoke(TxCommand.getAtomicObject, null, false);
-        return (AtomicObject) retval;
-    }
 
-    public Object beginAtomicAction() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.beginAtomicAction, null, true);
-    }
-
-    public Object commitAtomicAction() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.commitAtomicAction, null, true);
-    }
-
-    public Object abortAtomicAction() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.abortAtomicAction, null, true);
-    }
-
-    public Object createAtomicObject(int val) throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.createAtomicObject, val, false);
-    }
-
-    public Object getAtomicObject() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.getAtomicObject, null, false);
-    }
-
-    public Object incrementAndGetAtomicObject() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.incrementAndGetAtomicObject, null, false);
-    }
-
-    public Object decrementAndGetAtomicObject() throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.decrementAndGetAtomicObject, null, false);
-    }
-
-    public Object addAndGetAtomicObject(int val) throws Exception {
-        return invoke(TransactionStateMachine.TxCommand.addAndGetAtomicObject, val, false);
+    public Object execUserCommands(final String input) throws Exception {
+        return invoke(TransactionStateMachine.TxCommand.execUserCommand, input, false);
     }
 
     protected Object invoke(TransactionStateMachine.TxCommand command, Object val, boolean ignore_return_value) throws Exception {
         ByteArrayDataOutputStream out = new ByteArrayDataOutputStream(2048);
-        if (command.equals(TransactionStateMachine.TxCommand.addAndGetAtomicObject)) {
-            out.writeInt((Integer) val);
-        }
         try {
             out.writeByte(command.ordinal());
             Util.objectToStream(val, out);

@@ -42,23 +42,22 @@ public class TransactionSMDemo {
 
     public static void main(String[] args) throws Exception {
         String props = "narayana-raft.xml";
-//        boolean follower=false;
-//        if(args[1]!=null && args[1].equals("true")){
-//            follower=true;
-//        }
-//        long timeout=3000;
-
         addNewStateMachine(props, args[0]);
-
-
         String cluster = "rsm";
 //        registerNodes(cluster);
 
         Thread.sleep(2000);
-        checkRoles();
+//        checkRoles();
 
-        chooseNodeNOperate();
+//        chooseNodeNOperate();
 //        unregisterNodes(cluster);
+        TransactionStateMachine tsm = nodeList.get(0);
+        if (tsm !=null){
+            userActions.setTransactionStateMachine(nodeList.get(0));
+            userActions.loop();
+        } else {
+            throw new Exception("Cannot start state machine. Try to restart JVM.");
+        }
     }
 
     private static void addNewStateMachine(String props, String name) throws Exception {
